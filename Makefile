@@ -359,3 +359,8 @@ force:
 
 .PHONY: all check clean clean-all clean-plugins distclean force install
 .PHONY: print-version tags test testclean plugins docs
+
+
+
+me: 
+	compiledb make

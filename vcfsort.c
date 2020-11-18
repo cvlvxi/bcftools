@@ -320,6 +320,8 @@ int main_sort(int argc, char *argv[])
     args->max_mem = 768*1000*1000;
     args->output_fname = "-";
 
+    printf("Hello I am here!");
+
     static struct option loptions[] =
     {
         {"max-mem",required_argument,NULL,'m'},
