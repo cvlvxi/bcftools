@@ -365,3 +365,5 @@ force:
 me: 
 	/Users/Christopher/Desktop/dev/devtools/python/miniconda3.8/miniconda3.8/bin/compiledb make
 
+metest:
+	./bcftools sort -o mytests/sorted.vcf mytests/unsorted.vcf

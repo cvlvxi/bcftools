@@ -43,7 +43,7 @@
 #include <htslib/hts_os.h>
 #include "kheap.h"
 #include "bcftools.h"
-#include "customsort/bench.h"
+#include "customsort/quadsort.h"
 
 typedef struct
 {
@@ -122,7 +122,8 @@ void buf_flush(args_t *args)
 {
     if ( !args->nbuf ) return;
 
-    qsort(args->buf, args->nbuf, sizeof(*args->buf), cmp_bcf_pos);
+//    qsort(args->buf, args->nbuf, sizeof(*args->buf), cmp_bcf_pos);
+    quadsort(args->buf, args->nbuf, sizeof(*args->buf), cmp_bcf_pos);
 
     args->nblk++;
     args->blk = (blk_t*) realloc(args->blk, sizeof(blk_t)*args->nblk);
@@ -322,7 +323,6 @@ int main_sort(int argc, char *argv[])
     args->output_fname = "-";
 
     printf("Hello I am here!");
-    run_benchmark();
 
     static struct option loptions[] =
     {
