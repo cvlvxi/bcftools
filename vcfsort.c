@@ -43,6 +43,7 @@
 #include <htslib/hts_os.h>
 #include "kheap.h"
 #include "bcftools.h"
+#include "customsort/bench.h"
 
 typedef struct
 {
@@ -321,6 +322,7 @@ int main_sort(int argc, char *argv[])
     args->output_fname = "-";
 
     printf("Hello I am here!");
+    run_benchmark();
 
     static struct option loptions[] =
     {
