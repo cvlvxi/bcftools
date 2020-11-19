@@ -26,7 +26,7 @@ CC       = gcc
 AR       = ar
 RANLIB   = ranlib
 CPPFLAGS =
-CFLAGS   = -g -Wall -O2
+CFLAGS   = -g -Wall -O0
 LDFLAGS  =
 LIBS     =
 
@@ -363,4 +363,5 @@ force:
 
 
 me: 
-	compiledb make
+	/Users/Christopher/Desktop/dev/devtools/python/miniconda3.8/miniconda3.8/bin/compiledb make
+
